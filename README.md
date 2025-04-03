@@ -83,6 +83,7 @@ Her iki yöntemin de amacı en az hamle ile sıralama yapmaktır ve farklı duru
         make
         ```
         Bu komut, `push_swap` yürütülebilir dosyasını oluşturur.
+      
     * **Bonus Kısım (`checker`):**
         ```bash
         make bonus
