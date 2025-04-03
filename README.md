@@ -133,7 +133,25 @@ Programı çalıştırmak için sıralanacak tamsayıları argüman olarak verin
 
     ```checker`, yığın doğru sıralandıysa `OK`, sıralanmadıysa `KO` çıktısı verir. Hatalı bir komut girilirse `Error` verir.
     ```
-    
+
+  * **Performans Kontrolü (Adım Sayısı):**
+    * **100 Sayı İçin:**
+      
+       ```bash
+       # Hedef: 100 sayı için < 700 adım (Minimum geçer not: 80)
+
+       ARG=$(perl -MList::Util=shuffle -e 'my @arr = (-1000..1000); @arr = shuffle(@arr); print join(" ", @arr[0..99]);') # 100 sayı üretir
+       ./push_swap $ARG | wc -l
+       ```
+    * **500 Sayı İçin:**
+      
+       ```bash
+       # Hedef: 500 sayı için < 5500 adım (Tam puan / Bonus için)
+
+       ARG=$(perl -MList::Util=shuffle -e 'my @arr = (-1000..1000); @arr = shuffle(@arr); print join(" ", @arr[0..499]);') # 500 sayı üretir
+       ./push_swap $ARG | wc -l
+       ```
+
 ---
 
 ## 📚 Kullanılabilir İşlemler
