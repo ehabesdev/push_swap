@@ -2,7 +2,7 @@
 
 [![Dil](https://img.shields.io/badge/Dil-C-blue.svg)](https://shields.io/)
 [![Okul](https://img.shields.io/badge/Okul-42%20Network-black.svg)](https://www.42kocaeli.com.tr)
-[![Norm](https://img.shields.io/badge/Norm-v4-brightgreen.svg)]([https://github.com/42School/norminette](https://github.com/42school/norminette/blob/master/pdf/en.norm.pdf))
+[![Norm](https://img.shields.io/badge/Norm-v4-brightgreen.svg)](https://github.com/42school/norminette/blob/master/pdf/en.norm.pdf)
 
 Bu proje, [42 Okulları](https://www.42kocaeli.com.tr) müfredatının bir parçasıdır. Temel amaç, verilen bir tamsayı yığınını (stack A) yalnızca sınırlı sayıda ve önceden tanımlanmış işlemler kullanarak en az hamle ile sıralamaktır. İkinci bir yığın (stack B) yardımcı olarak kullanılabilir.
 
