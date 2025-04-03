@@ -173,7 +173,7 @@ Programı çalıştırmak için sıralanacak tamsayıları argüman olarak verin
 
 ## 🚀 Geliştirme Süreci
 
-Bu projenin geliştirilmesi, titiz bir planlama ve adım adım ilerleme yaklaşımıyla gerçekleştirildi. Projenin her aşaması (gereksinim analizi, yol haritası oluşturma, dosya yapısı tasarımı, kodlama, test etme) detaylı bir şekilde ele alındı. Geliştirme sürecinde karşılaşılan zorluklar, özellikle algoritma optimizasyonu ve Norm V4 kurallarına sıkı uyum gibi konular, dikkatli çalışma ve araştırma ile aşıldı.
+Bu projenin her aşaması (gereksinim analizi, yol haritası oluşturma, dosya yapısı tasarımı, kodlama, test etme) detaylı bir şekilde ele alındı. Geliştirme sürecinde karşılaşılan zorluklar, özellikle algoritma optimizasyonu ve Norm V4 kurallarına sıkı uyum gibi konular, dikkatli çalışma ve araştırma ile aşıldı.
 
 ## 🎓 Öğrenilenler
 
