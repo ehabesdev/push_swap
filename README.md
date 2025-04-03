@@ -106,6 +106,7 @@ Programı çalıştırmak için sıralanacak tamsayıları argüman olarak verin
     ```bash
     ./checker 4 67 3 8 2 90
     # Komutları buraya girin (örn: sa, pb, ra), her biri yeni satırda
+    # Girişi bitirmek için CTRL+D
     ```
 * **`push_swap` Çıktısı ile Kullanım:**
 
