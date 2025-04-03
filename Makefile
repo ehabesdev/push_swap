@@ -2,8 +2,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-RM = rm -f
-RM_DIR = rm -rf
+RM = rm -rf
 
 NAME = push_swap
 CHECKER_NAME = checker
@@ -87,7 +86,7 @@ $(OBJ_DIR)/%.o: $(GNL_DIR)/%.c $(GNL_DIR)/get_next_line.h Makefile
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	$(RM_DIR) $(OBJ_DIR)
+	$(RM) $(OBJ_DIR)
 	$(LIBFT_MAKE) clean
 	$(PRINTF_MAKE) clean
 
