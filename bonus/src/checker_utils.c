@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 19:50:17 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/03 19:50:30 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/04 13:28:10 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,15 @@ static int	check_reverse_rotate_ops(char *line, t_stack **a, t_stack **b)
 	return (1);
 }
 
-void	execute_operation(char *line, t_stack **a, t_stack **b)
+int	execute_operation(char *line, t_stack **a, t_stack **b)
 {
 	if (!line || line[0] == '\0' || (line[0] == '\n' && line[1] == '\0'))
-		return ;
+		return (0);
 	if (check_swap_push_ops(line, a, b))
-		return ;
+		return (1);
 	if (check_rotate_ops(line, a, b))
-		return ;
+		return (1);
 	if (check_reverse_rotate_ops(line, a, b))
-		return ;
-	exit_error(a, b);
+		return (1);
+	return (0);
 }

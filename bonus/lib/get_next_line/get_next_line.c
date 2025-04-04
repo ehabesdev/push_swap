@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:16:34 by ehabes            #+#    #+#             */
-/*   Updated: 2024/12/30 20:52:41 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/04 13:18:07 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ char	*get_next_line(int fd)
 	static char	*buffer;
 	char		*line;
 
+	if (fd == -1)
+	{
+		if (buffer)
+			free(buffer);
+		buffer = NULL;
+		return (NULL);
+	}
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	buffer = read_function(fd, buffer);
