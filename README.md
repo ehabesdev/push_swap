@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/ehabesdev/ehabesdev/blob/main/banner/push_swape.png?raw=true" alt="Push_swap 42 project badge"/>
+</p>
+
 # 🥞 Push_Swap
 
 [![Dil](https://img.shields.io/badge/Dil-C-blue.svg)](https://en.wikipedia.org/wiki/C_programming_language)
