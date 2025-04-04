@@ -175,10 +175,7 @@ Programı çalıştırmak için sıralanacak tamsayıları argüman olarak verin
 | `rrb` | `reverse rotate b`: B yığınındaki tüm elemanları bir pozisyon aşağı kaydırır (son eleman başa geçer). |
 | `rrr` | `rra` ve `rrb` işlemlerini aynı anda yapar.         |
 
-
-## 🚀 Geliştirme Süreci
-
-Bu projenin her aşaması (gereksinim analizi, yol haritası oluşturma, dosya yapısı tasarımı, kodlama, test etme) detaylı bir şekilde ele alındı. Geliştirme sürecinde karşılaşılan zorluklar, özellikle algoritma optimizasyonu ve Norm V4 kurallarına sıkı uyum gibi konular, dikkatli çalışma ve araştırma ile aşıldı.
+---
 
 ## 🙏 Teşekkürler
 
