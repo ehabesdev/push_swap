@@ -180,21 +180,6 @@ Programı çalıştırmak için sıralanacak tamsayıları argüman olarak verin
 
 Bu projenin her aşaması (gereksinim analizi, yol haritası oluşturma, dosya yapısı tasarımı, kodlama, test etme) detaylı bir şekilde ele alındı. Geliştirme sürecinde karşılaşılan zorluklar, özellikle algoritma optimizasyonu ve Norm V4 kurallarına sıkı uyum gibi konular, dikkatli çalışma ve araştırma ile aşıldı.
 
-## 🎓 Öğrenilenler
-
-Bu proje boyunca aşağıdaki konularda önemli bilgiler ve beceriler edinildi:
-
-* **Planlama ve Modülerlik:** Karmaşık bir problemin adımlara bölünmesi, modüler bir dosya yapısı oluşturulması ve projenin adım adım geliştirilmesi.
-* **C Programlama ve Veri Yapıları:** Bağlı listeler kullanılarak stack (yığın) veri yapısının etkin bir şekilde implemente edilmesi ve yönetilmesi.
-* **Algoritma Tasarımı ve Optimizasyon:** `push_swap` problemi için farklı stratejilerin (küçük durumlar, indeksleme, gruplama/chunking) anlaşılması ve uygulanması.
-* **Stack Operasyonları:** `push_swap` için tanımlı 11 temel stack operasyonunun mantığı ve doğru implementasyonu.
-* **Argüman İşleme ve Doğrulama:** Komut satırı argümanlarının alınması, sayı formatı kontrolü, integer taşma (overflow/underflow) kontrolü ve tekrar eden sayı kontrolünün yapılması.
-* **Norm V4 Uyumu:** 42 Okulu'nun katı kodlama standartlarına (fonksiyon uzunluğu, satır uzunluğu, dosya başına fonksiyon sayısı, isimlendirme vb.) uyum sağlama pratiği.
-* **Makefile Kullanımı:** Projenin derlenmesi, temizlenmesi, kütüphanelerin (`libft`, `ft_printf`, `get_next_line`) ve bonus bölümünün yönetilmesi için kapsamlı bir Makefile oluşturulması.
-* **Hata Yönetimi ve Debugging:** Hata durumlarının (`stderr`, `exit`) doğru yönetilmesi ve adım adım `printf` gibi yöntemlerle hataların ayıklanması.
-* **Bellek Yönetimi:** `malloc` ile ayrılan hafızanın `free` ile doğru zamanda serbest bırakılması ve `valgrind` ile bellek sızıntısı kontrolü yapılması.
-* **Bonus (Checker) Geliştirme:** Standart girdiden okuma (`get_next_line`), okunan komutları işleme ve program davranışını doğrulama mantığının anlaşılması.
-
 ## 🙏 Teşekkürler
 
 Bu projenin geliştirilmesi sürecinde sağlanan eğitim ve kaynaklar için **42 Kocaeli** ekibine teşekkür ederim. Ayrıca, proje süresince fikir alışverişinde bulunduğum veya karşılaştığım zorluklarda yardımcı olan tüm **42 Network öğrencilerine (cadet)** ve yol gösterici olan çeşitli **çevrimiçi kaynaklara** minnettarım.
