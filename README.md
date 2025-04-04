@@ -1,4 +1,4 @@
-# Push_Swap Projesi
+# 🥞 Push_Swap Projesi
 
 [![Dil](https://img.shields.io/badge/Dil-C-blue.svg)](https://en.wikipedia.org/wiki/C_programming_language)
 [![Okul](https://img.shields.io/badge/Okul-42%20Network-black.svg)](https://www.42network.org/)
