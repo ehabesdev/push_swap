@@ -98,6 +98,6 @@ fclean: clean
 
 re: fclean all
 
-reb: fclean bonus
+reb: fclean bonus all
 
 .PHONY: all clean fclean re bonus reb

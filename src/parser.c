@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:40:55 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/04 15:32:55 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/09 02:18:54 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,61 +47,41 @@ static int	process_number_string(char *num_str, t_stack **stack_a)
 	return (1);
 }
 
-static t_stack	*parse_single_string_arg(char *arg_str)
+static void	parse_argument(char *arg, t_stack **stack_a)
 {
-	t_stack	*stack_a;
 	char	**numbers;
 	int		i;
 	int		process_result;
 
-	stack_a = NULL;
-	numbers = NULL;
-	process_result = 1;
-	numbers = ft_split(arg_str, ' ');
+	numbers = ft_split(arg, ' ');
 	if (!numbers)
-		exit_error(NULL, NULL);
+		exit_error(stack_a, NULL);
 	i = 0;
+	process_result = 1;
 	while (numbers[i] != NULL && process_result)
 	{
-		if (numbers[i][0] == '\0')
-			i++;
-		process_result = process_number_string(numbers[i], &stack_a);
+		process_result = process_number_string(numbers[i], stack_a);
 		i++;
 	}
 	free_split_result(numbers);
-	if (!process_result || stack_a == NULL)
-		exit_error(&stack_a, NULL);
-	return (stack_a);
-}
-
-static t_stack	*parse_multiple_args(int argc, char **argv)
-{
-	t_stack	*stack_a;
-	int		i;
-	int		process_status;
-
-	stack_a = NULL;
-	i = 1;
-	process_status = 1;
-	while (i < argc && process_status)
-	{
-		process_status = process_number_string(argv[i], &stack_a);
-		i++;
-	}
-	if (!process_status)
-		exit_error(&stack_a, NULL);
-	return (stack_a);
+	if (!process_result)
+		exit_error(stack_a, NULL);
 }
 
 t_stack	*parse_arguments(int argc, char **argv)
 {
 	t_stack	*stack_a;
+	int		i;
 
 	stack_a = NULL;
-	if (argc == 2)
-		stack_a = parse_single_string_arg(argv[1]);
-	else if (argc > 2)
-		stack_a = parse_multiple_args(argc, argv);
+	i = 1;
+	while (i < argc)
+	{
+		if (argv[i][0] == '\0')
+			exit_error(&stack_a, NULL);
+		parse_argument(argv[i], &stack_a);
+		i++;
+	}
 	if (check_duplicates(stack_a))
 		exit_error(&stack_a, NULL);
 	return (stack_a);
