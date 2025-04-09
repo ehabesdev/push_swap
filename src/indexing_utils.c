@@ -73,10 +73,7 @@ static void	set_indices_from_array(t_stack *a, int *sorted_arr, int size)
 		while (i < size)
 		{
 			if (current->value == sorted_arr[i])
-			{
 				current->index = i;
-				break ;
-			}
 			i++;
 		}
 		current = current->next;
