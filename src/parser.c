@@ -78,9 +78,7 @@ t_stack	*parse_arguments(int argc, char **argv)
 	while (i < argc)
 	{
 		if (argv[i][0] == '\0' || argv[i][0] == ' ')
-		{
 			exit_error(&stack_a, NULL);
-		}
 		parse_argument(argv[i], &stack_a);
 		i++;
 	}
