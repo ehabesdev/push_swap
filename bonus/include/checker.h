@@ -13,10 +13,9 @@
 #ifndef CHECKER_H
 # define CHECKER_H
 
-# include "../../include/push_swap.h" // PS
-# include "../lib/get_next_line/get_next_line.h" // GNL
+# include "../../include/push_swap.h"
+# include "../lib/get_next_line/get_next_line.h"
 
-/* checker_utils.c: Parses and executes one operation line from stdin */
 int	execute_operation(char *line, t_stack **a, t_stack **b);
 
 #endif

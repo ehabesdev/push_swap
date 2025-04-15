@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:40:47 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/03 04:40:47 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/15 14:40:30 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,4 @@ void	sb(t_stack **b, int print)
 	swap(b);
 	if (print)
 		ft_printf("sb\n");
-}
-
-void	ss(t_stack **a, t_stack **b, int print)
-{
-	swap(a);
-	swap(b);
-	if (print)
-		ft_printf("ss\n");
 }

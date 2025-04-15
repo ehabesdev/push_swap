@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:40:55 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/09 02:18:54 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/13 20:59:21 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,10 @@ t_stack	*parse_arguments(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (argv[i][0] == '\0')
+		if (argv[i][0] == '\0' || argv[i][0] == ' ')
+		{
 			exit_error(&stack_a, NULL);
+		}
 		parse_argument(argv[i], &stack_a);
 		i++;
 	}

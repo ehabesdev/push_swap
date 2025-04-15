@@ -13,19 +13,16 @@ OBJ_DIR = obj
 LIB_DIR = lib
 BONUS_DIR = bonus
 
-# Libft
 LIBFT_NAME = libft
 LIBFT_DIR = $(LIB_DIR)/$(LIBFT_NAME)
 LIBFT_A = $(LIBFT_DIR)/$(LIBFT_NAME).a
 LIBFT_MAKE = $(MAKE) -C $(LIBFT_DIR)
 
-# ft_printf
 PRINTF_NAME = ft_printf
 PRINTF_DIR = $(LIB_DIR)/$(PRINTF_NAME)
 PRINTF_A = $(PRINTF_DIR)/libftprintf.a
 PRINTF_MAKE = $(MAKE) -C $(PRINTF_DIR)
 
-# Get Next Line
 GNL_DIR = $(BONUS_DIR)/lib/get_next_line
 GNL_SRCS = $(GNL_DIR)/get_next_line.c $(GNL_DIR)/get_next_line_utils.c
 GNL_OBJS = $(patsubst $(GNL_DIR)/%.c,$(OBJ_DIR)/%.o,$(GNL_SRCS))
@@ -39,11 +36,11 @@ COMMON_SRCS = $(SRC_DIR)/stack_utils.c \
               $(SRC_DIR)/operations_push.c \
               $(SRC_DIR)/operations_rotate.c \
               $(SRC_DIR)/operations_reverse_rotate.c \
-              $(SRC_DIR)/sort_utils.c
+              $(SRC_DIR)/sort_utils.c \
+			  $(SRC_DIR)/sorting_algo.c \
+               $(SRC_DIR)/indexing_utils.c
 
 PS_ONLY_SRCS = $(SRC_DIR)/push_swap.c \
-               $(SRC_DIR)/sorting_algo.c \
-               $(SRC_DIR)/indexing_utils.c
 
 CHECKER_SRCS = $(BONUS_DIR)/src/checker.c $(BONUS_DIR)/src/checker_utils.c
 

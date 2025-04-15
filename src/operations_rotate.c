@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:40:42 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/03 05:10:19 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/15 14:40:12 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,4 @@ void	rb(t_stack **b, int print)
 	rotate(b);
 	if (print)
 		ft_printf("rb\n");
-}
-
-void	rr(t_stack **a, t_stack **b, int print)
-{
-	rotate(a);
-	rotate(b);
-	if (print)
-		ft_printf("rr\n");
 }

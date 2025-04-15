@@ -6,13 +6,13 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:41:18 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/03 04:41:18 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/15 16:17:52 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static int	find_index_position(t_stack *stack, int target_index)
+int	find_index_position(t_stack *stack, int target_index)
 {
 	int	position;
 
@@ -93,7 +93,7 @@ void	push_swap_algo(t_stack **a, t_stack **b)
 	if (is_sorted(*a) || size <= 1)
 		return ;
 	assign_indices(*a);
-	if (size <= 3)
+	if (size <= 5)
 		sort_small_stack(a, b);
 	else
 	{

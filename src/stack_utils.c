@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:41:25 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/03 04:41:26 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/09 22:08:18 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ void	add_node_back(t_stack **stack, t_stack *new_node)
 	if (!stack || !new_node)
 		return ;
 	if (*stack == NULL)
-	{
 		*stack = new_node;
-	}
 	else
 	{
 		last_node = find_last_node(*stack);
