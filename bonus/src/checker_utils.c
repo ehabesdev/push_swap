@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 19:50:17 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/15 16:25:38 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/21 00:04:13 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ static int	check_swap_push_ops(char *line, t_stack **a, t_stack **b)
 		sa(a, 0);
 	else if (ft_strncmp(line, "sb\n", 3) == 0)
 		sb(b, 0);
+	else if (ft_strncmp(line, "ss\n", 3) == 0)
+	{
+		sa(a, 0);
+		sb(b, 0);
+	}
 	else if (ft_strncmp(line, "pa\n", 3) == 0)
 		pa(a, b, 0);
 	else if (ft_strncmp(line, "pb\n", 3) == 0)
@@ -33,6 +38,11 @@ static int	check_rotate_ops(char *line, t_stack **a, t_stack **b)
 		ra(a, 0);
 	else if (ft_strncmp(line, "rb\n", 3) == 0)
 		rb(b, 0);
+	else if (ft_strncmp(line, "rr\n", 3) == 0)
+	{
+		ra(a, 0);
+		rb(b, 0);
+	}
 	else
 		return (0);
 	return (1);
@@ -44,6 +54,11 @@ static int	check_reverse_rotate_ops(char *line, t_stack **a, t_stack **b)
 		rra(a, 0);
 	else if (ft_strncmp(line, "rrb\n", 4) == 0)
 		rrb(b, 0);
+	else if (ft_strncmp(line, "rrr\n", 4) == 0)
+	{
+		rra(a, 0);
+		rrb(b, 0);
+	}
 	else
 		return (0);
 	return (1);

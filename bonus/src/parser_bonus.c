@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   parser_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 04:40:55 by ehabes            #+#    #+#             */
-/*   Updated: 2025/04/21 00:10:06 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/04/21 00:09:09 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/checker.h"
 
 static void	free_split_result(char **split_result)
 {
@@ -78,7 +78,7 @@ t_stack	*parse_arguments(int argc, char **argv)
 	while (i < argc)
 	{
 		if (argv[i][0] == '\0' || (argv[i][0] == ' ' && argv[i][1] == ' ') \
-		|| (argv[i][0] == ' ' && argv[i][1] == '\0'))
+			|| (argv[i][0] == ' ' && argv[i][1] == '\0'))
 			exit_error(&stack_a, NULL);
 		parse_argument(argv[i], &stack_a);
 		i++;

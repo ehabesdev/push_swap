@@ -27,24 +27,35 @@ GNL_DIR = $(BONUS_DIR)/lib/get_next_line
 GNL_SRCS = $(GNL_DIR)/get_next_line.c $(GNL_DIR)/get_next_line_utils.c
 GNL_OBJS = $(patsubst $(GNL_DIR)/%.c,$(OBJ_DIR)/%.o,$(GNL_SRCS))
 
-COMMON_SRCS = $(SRC_DIR)/stack_utils.c \
-              $(SRC_DIR)/error_utils.c \
-              $(SRC_DIR)/validation_utils.c \
-              $(SRC_DIR)/duplicate_utils.c \
-              $(SRC_DIR)/parser.c \
-              $(SRC_DIR)/operations_swap.c \
-              $(SRC_DIR)/operations_push.c \
-              $(SRC_DIR)/operations_rotate.c \
-              $(SRC_DIR)/operations_reverse_rotate.c \
-              $(SRC_DIR)/sort_utils.c \
-			  $(SRC_DIR)/sorting_algo.c \
-               $(SRC_DIR)/indexing_utils.c
+PS_ONLY_SRCS = 	$(SRC_DIR)/push_swap.c \
+				$(SRC_DIR)/stack_utils.c \
+              	$(SRC_DIR)/error_utils.c \
+              	$(SRC_DIR)/validation_utils.c \
+              	$(SRC_DIR)/duplicate_utils.c \
+              	$(SRC_DIR)/parser.c \
+              	$(SRC_DIR)/operations_swap.c \
+              	$(SRC_DIR)/operations_push.c \
+              	$(SRC_DIR)/operations_rotate.c \
+              	$(SRC_DIR)/operations_reverse_rotate.c \
+              	$(SRC_DIR)/sort_utils.c \
+			  	$(SRC_DIR)/sorting_algo.c \
+               	$(SRC_DIR)/indexing_utils.c
 
-PS_ONLY_SRCS = $(SRC_DIR)/push_swap.c \
+CHECKER_SRCS = 	$(BONUS_DIR)/src/checker.c \
+				$(BONUS_DIR)/src/checker_utils.c \
+				$(BONUS_DIR)/src/stack_utils_bonus.c \
+              	$(BONUS_DIR)/src/error_utils_bonus.c \
+              	$(BONUS_DIR)/src/validation_utils_bonus.c \
+              	$(BONUS_DIR)/src/duplicate_utils_bonus.c \
+              	$(BONUS_DIR)/src/parser_bonus.c \
+              	$(BONUS_DIR)/src/operations_swap_bonus.c \
+              	$(BONUS_DIR)/src/operations_push_bonus.c \
+              	$(BONUS_DIR)/src/operations_rotate_bonus.c \
+              	$(BONUS_DIR)/src/operations_reverse_rotate_bonus.c \
+              	$(BONUS_DIR)/src/sort_utils_bonus.c \
+			  	$(BONUS_DIR)/src/sorting_algo_bonus.c \
+               	$(BONUS_DIR)/src/indexing_utils_bonus.c
 
-CHECKER_SRCS = $(BONUS_DIR)/src/checker.c $(BONUS_DIR)/src/checker_utils.c
-
-COMMON_OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(COMMON_SRCS))
 PS_ONLY_OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(PS_ONLY_SRCS))
 CHECKER_OBJS = $(patsubst $(BONUS_DIR)/src/%.c,$(OBJ_DIR)/%.o,$(CHECKER_SRCS))
 
@@ -56,13 +67,13 @@ INCLUDES = -I$(INC_DIR) \
 
 all: $(NAME)
 
-$(NAME): $(PS_ONLY_OBJS) $(COMMON_OBJS) $(LIBFT_A) $(PRINTF_A)
-	$(CC) $(CFLAGS) $(PS_ONLY_OBJS) $(COMMON_OBJS) $(LIBFT_A) $(PRINTF_A) -o $(NAME)
+$(NAME): $(PS_ONLY_OBJS) $(LIBFT_A) $(PRINTF_A)
+	$(CC) $(CFLAGS) $(PS_ONLY_OBJS) $(LIBFT_A) $(PRINTF_A) -o $(NAME)
 
 bonus: $(CHECKER_NAME)
 
-$(CHECKER_NAME): $(CHECKER_OBJS) $(COMMON_OBJS) $(GNL_OBJS) $(LIBFT_A) $(PRINTF_A)
-	$(CC) $(CFLAGS) $(CHECKER_OBJS) $(COMMON_OBJS) $(GNL_OBJS) $(LIBFT_A) $(PRINTF_A) -o $(CHECKER_NAME)
+$(CHECKER_NAME): $(CHECKER_OBJS) $(GNL_OBJS) $(LIBFT_A) $(PRINTF_A)
+	$(CC) $(CFLAGS) $(CHECKER_OBJS) $(GNL_OBJS) $(LIBFT_A) $(PRINTF_A) -o $(CHECKER_NAME)
 
 $(LIBFT_A):
 	$(LIBFT_MAKE) all
@@ -95,6 +106,6 @@ fclean: clean
 
 re: fclean all
 
-reb: fclean bonus all
+reb: fclean bonus
 
 .PHONY: all clean fclean re bonus reb
