@@ -79,8 +79,6 @@ static void	sort_three(t_stack **a)
 
 static void	sort_five(t_stack **a, t_stack **b, int size)
 {
-	if (is_sorted(*a))
-		return ;
 	bring_to_top_a(a, 0);
 	if (is_sorted(*a))
 		return ;
