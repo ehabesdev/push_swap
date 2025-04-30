@@ -77,10 +77,8 @@ static void	sort_three(t_stack **a)
 		rra(a, 1);
 }
 
-static void	sort_five(t_stack **a, t_stack **b)
+static void	sort_five(t_stack **a, t_stack **b, int size)
 {
-	if (is_sorted(*a))
-		return ;
 	bring_to_top_a(a, 0);
 	if (is_sorted(*a))
 		return ;
@@ -111,6 +109,6 @@ void	sort_small_stack(t_stack **a, t_stack **b)
 		sa(a, 1);
 	else if (size == 3)
 		sort_three(a);
-	else if (size == 5)
-		sort_five(a, b);
+	else if (size <= 5)
+		sort_five(a, b, size);
 }
