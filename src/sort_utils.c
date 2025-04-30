@@ -85,13 +85,16 @@ static void	sort_five(t_stack **a, t_stack **b)
 	if (is_sorted(*a))
 		return ;
 	pb(a, b, 1);
-	bring_to_top_a(a, 1);
-	if (is_sorted(*a))
+	if (size == 5)
 	{
-		pa(a, b, 1);
-		return ;
+		bring_to_top_a(a, 1);
+		if (is_sorted(*a))
+		{
+			pa(a, b, 1);
+			return ;
+		}
+		pb(a, b, 1);
 	}
-	pb(a, b, 1);
 	sort_three(a);
 	if (*b && (*b)->next && (*b)->index < (*b)->next->index)
 		sb(b, 1);
